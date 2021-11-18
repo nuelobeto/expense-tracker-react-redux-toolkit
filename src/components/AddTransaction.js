@@ -11,16 +11,12 @@ function AddTransaction() {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    if (text || amount === "") {
-      alert("f");
-    } else {
-      dispatch(
-        addTransaction({
-          text: text,
-          amount: amount,
-        })
-      );
-    }
+    dispatch(
+      addTransaction({
+        text: text,
+        amount: amount,
+      })
+    );
 
     setText("");
     setAmount("");
